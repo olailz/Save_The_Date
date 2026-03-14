@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Elias & Lorena - Save the Date</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <section id="entrance" class="entrance-full">
+        <div class="entrance-wrap" style="text-align: center;">
+            <h2 class="entrance-label">NUESTRA BODA DE PLATA</h2>
+            <h1 class="entrance-names">Elias & Lorena</h1>
+            <button id="btnEnter" class="btn-play">
+                <i class="fa-solid fa-envelope-open"></i> ABRIR INVITACIÓN
+            </button>
+        </div>
+    </section>
+
+    <div id="youtube-player"></div>
+
+    <div id="music-player" class="music-ctrl">
+        <i id="music-icon-i" class="fa-solid fa-music"></i>
+    </div>
+
+    <div class="card-container">
+        <main id="main-content" class="hidden-content">
+            
+            <section class="hero-section scroll-reveal">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline class="video-element">
+                        <source src="img/boda_video1.mp4" type="video/mp4">
+                    </video>
+                    <div class="torn-edge-bottom"></div> 
+                </div>
+                <div class="hero-text">
+                    <p class="std-label">SAVE THE DATE</p>
+                    <h1 class="names-gold">Elias & Lorena</h1>
+                </div>
+            </section>
+
+            <section class="event-info scroll-reveal">
+                <h2 class="anniversary-title">25° Aniversario de Bodas</h2>
+                <p class="silver-label">CELEBRACIÓN DE PLATA</p>
+                <div class="ornament">✦</div>
+            </section>
+
+            <section class="photo-section scroll-reveal">
+                <div class="torn-edge-top"></div>
+                <div class="photo-frame">
+                    <img src="img/foto2.jpg" alt="Elias y Lorena" class="img-responsive">
+                </div>
+                <div class="torn-edge-bottom"></div>
+            </section>
+
+            <section class="details-section scroll-reveal">
+                <div class="date-row">
+                    <span class="line"></span>
+                    <p class="final-date">16 . 08 . 2026</p>
+                    <span class="line"></span>
+                </div>
+                <p class="location-text"><i class="fa-solid fa-location-dot"></i> SANTA CATARINA PINULA </p>
+            </section>
+
+            <footer class="final-footer scroll-reveal">
+                <p class="quote">"Celebrando 25 años de amor"</p>
+                <p class="formal-note">Próximamente recibirás la invitación formal</p>
+
+                <div class="footer-copyright-box">
+                    <p class="footer-copyright"> COPYRIGHT © 2026 | <b>OLAILZ</b></p>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

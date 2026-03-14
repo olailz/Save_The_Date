@@ -1,0 +1,130 @@
+:root {
+    --bg-paper: #f9f7f4;
+    --gold: #c5a059;
+    --text: #2c2c2c;
+    --silver: #a8a8a8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #dcdcdc;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.hero-text{
+    padding: 0px 0px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.hero-text .std-label {
+    padding: 8px 10px;
+    text-align: center;
+    margin-top: 0px;
+}
+.card-container {
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--bg-paper);
+    min-height: 100vh;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+}
+.anniversary-title{
+    font-size: 1.5rem;
+    color: var(--silver);
+    text-align: center;
+    margin-top: 0px;
+}
+
+.silver-label{
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--silver);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease-out;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ENTRADA */
+.entrance-full {
+    position: fixed; inset: 0; background: var(--bg-paper);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000; transition: transform 1s ease-in-out;
+}
+.entrance-label { font-size: 0.8rem; letter-spacing: 3px; color: var(--silver); margin-bottom: 10px; }
+.entrance-names { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: var(--gold); }
+.btn-play {
+    padding: 12px 25px; border: 1px solid var(--gold); background: none;
+    color: var(--gold); cursor: pointer; letter-spacing: 2px; margin-top: 30px;
+}
+
+/* VIDEO */
+.video-wrapper { position: relative; width: 100%; aspect-ratio: 9/16; background: #000; overflow: hidden; }
+.video-element { width: 100%; height: 100%; object-fit: cover; }
+
+/* COUNTDOWN */
+#countdown { display: flex; justify-content: center; gap: 15px; margin: 30px 0; }
+.time-box { text-align: center; min-width: 60px; }
+.time-box span { display: block; font-size: 1.8rem; color: var(--gold); font-weight: 300; }
+.time-box p { font-size: 0.6rem; color: var(--silver); text-transform: uppercase; }
+
+/* TEXTOS Y FOOTER */
+.hero-text { padding: 40px 20px; text-align: center; }
+.names-gold { font-family: 'Great Vibes', cursive; font-size: 3.8rem; color: var(--gold); line-height: 1; }
+.photo-frame { width: 90%; margin: 0 auto; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.img-responsive { width: 100%; height: auto; display: block; }
+
+.event-info, .details-section, .final-footer { text-align: center; padding: 30px 20px; }
+.date-row { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 10px; }
+.line { width: 10px; height: 1px; background-color: var(--gold); }
+.final-date { font-size: 1.8rem; font-weight: 200; letter-spacing: 4px; }
+.quote { font-family: 'Great Vibes', cursive; font-size: 2rem; color: var(--gold); margin-bottom: 10px; }
+.formal-note { font-size: 0.85rem; color: var(--black); font-style: italic; margin-bottom: 30px; }
+
+/* ESTILOS DEL COPYRIGHT CORREGIDOS */
+.footer-copyright-box {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.footer-copyright {
+    font-size: 0.65rem;
+    color: var(--silver);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.footer-copyright b {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* REPRODUCTOR */
+#player { position: absolute; top: -1000px; opacity: 0; }
+.music-ctrl {
+    position: fixed; top: 20px; right: 20px; z-index: 1500;
+    background: #fff; width: 45px; height: 45px; border-radius: 50%;
+    display: none; justify-content: center; align-items: center; cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); color: var(--gold);
+}
+.hidden-content { display: none; }
+
+/* BORDES RASGADOS */
+.torn-edge-bottom, .torn-edge-top { position: absolute; width: 100%; height: 40px; background: var(--bg-paper); z-index: 10; }
+.torn-edge-bottom { bottom: -1px; clip-path: polygon(0% 100%, 5% 80%, 10% 100%, 15% 85%, 20% 95%, 25% 82%, 30% 100%, 35% 88%, 40% 92%, 45% 80%, 50% 100%, 55% 85%, 60% 98%, 65% 82%, 70% 95%, 75% 85%, 80% 100%, 85% 88%, 90% 95%, 95% 82%, 100% 100%); }
+.torn-edge-top { top: -1px; clip-path: polygon(0% 0%, 5% 20%, 10% 0%, 15% 15%, 20% 5%, 25% 18%, 30% 0%, 35% 12%, 40% 8%, 45% 20%, 50% 0%, 55% 15%, 60% 2%, 65% 18%, 70% 5%, 75% 15%, 80% 0%, 85% 12%, 90% 5%, 95% 18%, 100% 0%); }
